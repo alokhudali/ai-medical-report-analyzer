@@ -1,0 +1,65 @@
+services:
+
+  backend:
+    build: ./backend
+    container_name: medical-backend
+
+    ports:
+      - "8002:8002"
+
+    env_file:
+      - ./backend/.env
+
+    volumes:
+      - backend_uploads:/app/uploaded_reports
+
+    networks:
+      - medical-ai-network
+
+    restart: unless-stopped
+
+
+  frontend:
+    build: ./frontend
+    container_name: medical-frontend
+
+    ports:
+      - "5173:5173"
+
+    depends_on:
+      - backend
+
+    networks:
+      - medical-ai-network
+
+    restart: unless-stopped
+
+
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    container_name: n8n
+
+    ports:
+      - "5678:5678"
+
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+    networks:
+      - medical-ai-network
+
+    restart: unless-stopped
+
+
+networks:
+  medical-ai-network:
+    driver: bridge
+
+
+volumes:
+
+  n8n_data:
+    name: n8n_data
+
+  backend_uploads:
+    name: backend_uploads
