@@ -21,7 +21,7 @@ function App() {
       formData.append("file", file);
 
       const response = await axios.post(
-        "https://backend.cutegirlsdmme.xyz/analyze",
+        "https://<domain_name>/analyze", // Add "localhost:8002" or domain name in the form of "www.domain.xyz".
         formData,
         {
           headers: {

@@ -8,7 +8,7 @@ export default defineConfig({
     host: '0.0.0.0',
 
     allowedHosts: [
-      'med.cutegirlsdmme.xyz'
+      '<frontend_domain_name>' //Add domain name or local host in the form of "www.domain.xyz".
     ]
   }
 })
