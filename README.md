@@ -7,6 +7,12 @@ This portfolio project demonstrates my ability to design and develop end-to-end 
 
 This AI - Automation system allows users to upload medical reports, automatically extracts text using Tesseract OCR, analyzes the report using Google's Gemini AI model, generates structured medical insights, and triggers automated notifications for high-risk cases through n8n workflows.
 
+## Workflow
+
+<p align="center">
+  <img src="assets/workflow.png" width="600">
+</p>
+
 ## Portfolio Highlights
 
 This project showcases expertise in:
@@ -119,15 +125,21 @@ medical-ai-analyzer/
 │   ├── ocr.py
 │   └── requirements.txt
 ├── frontend/
-│   ├── src/
 │   ├── public/
-│   └── package.json
-│
-│
-├── n8n/
-│   └── workflows/
-│
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   ├── Dockerfile
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── README.md
+│   ├── vite.config.js
+├── .gitignore
 ├── docker-compose.yml
-│
 └── README.md
 ```

@@ -4,6 +4,12 @@ __pycache__/
 *.pyo
 *.pyd
 
+# Utility scripts
+listmodels.py
+
+# Test scripts
+backend/test_pipeline.py
+
 # Virtual environment
 .venv/
 venv/
@@ -44,9 +50,3 @@ n8n_data/
 # Build artifacts
 build/
 dist/
-
-# Utility scripts
-listmodels.py
-
-# Test scripts
-backend/test_pipeline.py
