@@ -2,17 +2,8 @@
 
 # AI Based Medical Report Analyzer
 
-An AI-powered medical report analysis platform that automates the extraction, interpretation, and risk assessment of medical reports using OCR, Generative AI, and workflow automation.
 
-## Changes to make in code before deployment:
+This portfolio project demonstrates my ability to design and develop end-to-end AI applications by integrating modern frontend technologies, backend APIs, OCR pipelines, Large Language Models (LLMs), workflow automation, and cloud-native deployment practices.
 
-- frontend/App.jsx : \
-At line 24, change backend's url to `localhost:8002` or if exposed to the internet, change to your backend's domain name in the form of "www.domain.xyz".
+The system allows users to upload medical reports, automatically extracts text using Tesseract OCR, analyzes the report using Google's Gemini AI model, generates structured medical insights, and triggers automated notifications for high-risk cases through n8n workflows.
 
-- frontend/vite.config.js : \
-Add `localhost:5173` or your domain name in the form of "www.domain.xyz" in allowed hosts section.
-
-- Create `.env` file in backend directory and add your Gemini API key in the form of:
-```bash
-GEMINI_API_KEY=<your_api_key>
-```
