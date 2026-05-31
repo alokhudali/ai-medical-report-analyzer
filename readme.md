@@ -2,6 +2,8 @@
 
 # AI Based Medical Report Analyzer
 
+An AI-powered medical report analysis platform that automates the extraction, interpretation, and risk assessment of medical reports using OCR, Generative AI, and workflow automation.
+
 ## Changes to make in code before deployment:
 
 - frontend/App.jsx : \
