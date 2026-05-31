@@ -10,7 +10,7 @@ This AI - Automation system allows users to upload medical reports, automaticall
 ## Workflow
 
 <p align="center">
-  <img src="assets/workflow.png" width="600">
+  <img src="assets/workflow.png" width="800">
 </p>
 
 ## Portfolio Highlights
