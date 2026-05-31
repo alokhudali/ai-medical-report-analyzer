@@ -44,3 +44,9 @@ n8n_data/
 # Build artifacts
 build/
 dist/
+
+# Utility scripts
+listmodels.py
+
+# Test scripts
+backend/test_pipeline.py
