@@ -1,0 +1,64 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "high-risk",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a15cdbdf-9e4f-4bae-8f6c-3e056410f26c",
+      "name": "Webhook",
+      "webhookId": "70c419d6-8254-4f01-abba-cd60eaafbdbf"
+    },
+    {
+      "parameters": {
+        "subject": "<my-name>'s health at risk",
+        "emailType": "text",
+        "message": "=Patient: {{ $json.body.patient_name }} \nRisk Level: {{ $json.body.risk_level }}\n\nSummary: {{ $json.body.summary }}\nPlease review immediately.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        240,
+        0
+      ],
+      "id": "f2ab6413-ecd3-4023-929a-8a3f1b8fea62",
+      "name": "Send a message",
+      "webhookId": "61240dda-2fb2-4bff-ab57-4fe7f5a25095"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "74ede3e7-26c7-4a28-82e7-ec4a85df5ec3",
+  "meta": {
+    "instanceId": "aad63ded1e9e0a0fa9be607a3dd74b73720659986cd9f831f04ef7e8d08d272c"
+  },
+  "nodeGroups": [],
+  "id": "mx4AkITBYoaLtYMF",
+  "tags": []
+}

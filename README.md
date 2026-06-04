@@ -1,6 +1,3 @@
-# UNDER PROGRESS!!!
-
-
 # AI Based Medical Report Analyzer
 
 
@@ -149,3 +146,14 @@ medical-ai-analyzer/
 ├── docker-compose.yml
 └── README.md
 ```
+
+## Screenshots
+- Web interface
+<p align="center">
+  <img src="assets/ss1.png" width="800">
+</p>
+
+- Sample mail
+<p align="center">
+  <img src="assets/ss2.png" width="800">
+</p>

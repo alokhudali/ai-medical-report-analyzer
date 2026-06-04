@@ -75,11 +75,11 @@ Lets take a note of it for now.
 
 ## Changes to make in code before deploying in docker:
 
-- frontend/App.jsx : \
+- frontend/src/App.jsx : \
 At line 24, change backend's url to `localhost:8002` or if planning to expose to the internet (via cloudflared), change to your backend's domain name in the form of "www.domain.xyz".
 
 - frontend/vite.config.js : \
-Add `localhost:5173` or your domain name in the form of "www.domain.xyz" in allowed hosts section.
+Add `localhost:5173` or your frontend domain name in the form of "www.domain.xyz" in allowed hosts section.
 
 - Create `.env` file in backend directory and add your Gemini API key in the form of:
 ```bash
@@ -91,12 +91,51 @@ __NOTE:__ You can use same domain with different subdomains for endpoints.
 Run the command in cloned folder:
 
 ```bash
-docker compose up -d
+sudo docker compose up -d
 ```
 
 Containers will be deployed and can be checked by running `docker ps` command (or check in portainer).
 
-## Configuring n8n
- 
+## Map domains to endpoints
+- Open [dash.cloudflare.com](https://dash.cloudflare.com)
+- Press `ctrl+k` to open quick search panel
+- search "tunnel", you will find the option `Zero Trust > Networks > Tunnels`
+- Under the "Your Cloudflare Tunnels" section, click on your tunnel.
+- Go to "Published application routes" section, click on `+ Add a published application route`
+- Below "Hostname" section, select a domain, subdomain for your endpoint and below "Service" Section, choose type as `http` and add URL (localhost:5173 for frontend) and click `save`.
+- Do the same for all 3 endpoints.
 
-# UNDER PROGRESS....
+__NOTE:__ Make sure public urls are consistent in codes.
+
+## Configuring n8n
+
+- Access `localhost:5678`.
+- Create your admin account.
+- In `localhost:5678/home/workflows`, click on `+` icon on top-left corner beside n8n logo and select `New workflow`.
+- After opening a blank workspace, click on 3 dots on top-right and click `import from file`.
+- Import a json file which is located in `/n8n/workflow.json`
+- You will see something like this:
+<p align="center">
+  <img src="../assets/workspace.png" width="400">
+</p>
+
+- Double click on `Gmail` node, in `To` text field, enter e-mail address of a person (doctor) you want to send e-mail to if risk of your medical report is high, and replace `<my-name>` with your name in subject section.
+-  In the same window at the top, click on `Set up credentials` and configure your `OAuth Redirect URL`, `Client ID` and `Client Secret`. To do so, refer to this [video](https://youtu.be/tSM8NYUKXP4?si=HPSWqp3ktgMIREb9).
+
+__NOTE:__ In Gmail node, login to Google via n8n's localhost address, and not by domain name.
+
+- Exit gmail node window, on top-right corner, click on `Publish`, a pop-up window will open, enter `Version name` and click on `Publish` again at the bottom.
+
+n8n automation is configured.
+
+## Usage
+
+- Access the inteface via frontend's URL.
+- Upload medical report and click analyze
+- It will show you the results in 4 sections: 
+    - Risk level and patient name
+    - Summary
+    - Abnormalities
+    - Precautions
+- If risk level of the report is high, then backend will trigger n8n via webhook and send e-mail to your doctor.
+
