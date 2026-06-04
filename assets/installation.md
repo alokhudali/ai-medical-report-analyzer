@@ -38,7 +38,7 @@ brew install cloudflared
 You will be needing to configure your domain in cloudflare dashboard with your domain provider. Refer to this [official video](https://youtu.be/7hY3gp_-9EU?si=0X4efbHjt1JNPyN9) to setup your domain.
 
 After that: 
-- Open [dash.cloudflare.com](dash.cloudflare.com)
+- Open [dash.cloudflare.com](https://dash.cloudflare.com)
 - Press `ctrl+k` to open quick search panel
 - search "tunnel", you will find the option `Zero Trust > Networks > Tunnels`
 - Just below the "Your Cloudflare Tunnels" section, click on `+ Create Tunnel` located at the right side.
@@ -97,6 +97,6 @@ docker compose up -d
 Containers will be deployed and can be checked by running `docker ps` command (or check in portainer).
 
 ## Configuring n8n
-
+ 
 
 # UNDER PROGRESS....
