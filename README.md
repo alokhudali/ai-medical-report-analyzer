@@ -142,6 +142,8 @@ medical-ai-analyzer/
 │   ├── package.json
 │   ├── README.md
 │   ├── vite.config.js
+├── n8n/
+│   └── workflow.json
 ├── .gitignore
 ├── docker-compose.yml
 └── README.md
