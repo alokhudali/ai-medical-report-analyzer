@@ -1,3 +1,9 @@
+# Installation
+
+## Setup Docker
+
+To install Docker on your system, follow the official guide [here](https://docs.docker.com/engine/install/)
+
 ## Changes to make in code before deployment:
 
 - frontend/App.jsx : \

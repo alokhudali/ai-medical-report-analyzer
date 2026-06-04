@@ -1,5 +1,6 @@
 # UNDER PROGRESS!!!
 
+
 # AI Based Medical Report Analyzer
 
 
@@ -12,39 +13,6 @@ This AI - Automation system allows users to upload medical reports, automaticall
 <p align="center">
   <img src="assets/workflow.png" width="800">
 </p>
-
-## Portfolio Highlights
-
-This project showcases expertise in:
-
-- Full-Stack Application Development
-- AI-Powered Document Processing
-- OCR Integration
-- Prompt Engineering
-- REST API Development
-- Workflow Automation using n8n
-- Event-Driven Architecture
-- Docker & Containerization
-- Cloudflare Tunnel Deployment
-- AI System Integration
-- Enterprise Application Architecture
-
-## Why I Built This
-
-Medical reports often contain complex information that can be difficult for patients to interpret quickly. This project explores how AI can assist in extracting meaningful insights from medical documents and automate alerting workflows for potentially high-risk cases.
-
-## Key Skills Demonstrated
-  
-| Category | Skills Demonstrated| 
-| --- | --- |
-| Frontend | React, Vite, Axios |
-| Backend	| FastAPI, Python, REST APIs |
-| AI/ML |Gemini API, Prompt Engineering |
-| OCR |	Tesseract OCR |
-| Automation |n8n, Webhooks |
-| DevOps | Docker, Docker Compose |
-| Networking | Cloudflare Tunnel |
-| Development | Git, GitHub, VS Code |
 
 ## How It Works
 
@@ -77,7 +45,45 @@ If the AI determines that the patient's condition is high-risk:
 
 Backend triggers an n8n webhook
 n8n executes an automation workflow
-Email notification is sent to the designated doctor \
+Email notification is sent to the designated doctor 
+
+## Why I Built This
+
+Medical reports often contain complex information that can be difficult for patients to interpret quickly. This project explores how AI can assist in extracting meaningful insights from medical documents and automate alerting workflows for potentially high-risk cases.
+
+## Installation
+
+To set it up on your own machine, follow the guidelines [here](assets/installation.md).
+
+## Portfolio Highlights
+
+This project showcases expertise in:
+
+- Full-Stack Application Development
+- AI-Powered Document Processing
+- OCR Integration
+- Prompt Engineering
+- REST API Development
+- Workflow Automation using n8n
+- Event-Driven Architecture
+- Docker & Containerization
+- Cloudflare Tunnel Deployment
+- AI System Integration
+- Enterprise Application Architecture
+
+
+## Key Skills Demonstrated
+  
+| Category | Skills Demonstrated| 
+| --- | --- |
+| Frontend | React, Vite, Axios |
+| Backend	| FastAPI, Python, REST APIs |
+| AI/ML |Gemini API, Prompt Engineering |
+| OCR |	Tesseract OCR |
+| Automation |n8n, Webhooks |
+| DevOps | Docker, Docker Compose |
+| Networking | Cloudflare Tunnel |
+| Development | Git, GitHub, VS Code |
 
 ## Dockerized Deployment
 
